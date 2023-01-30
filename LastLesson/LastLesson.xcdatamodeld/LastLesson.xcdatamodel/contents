@@ -7,6 +7,10 @@
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="species" optional="YES" attributeType="String"/>
         <attribute name="status" optional="YES" attributeType="String"/>
-        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
 </model>

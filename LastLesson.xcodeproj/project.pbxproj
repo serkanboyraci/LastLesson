@@ -77,9 +77,9 @@
 		60B0E1A829728BFE00346FA0 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				60B0E1A929728C5F00346FA0 /* ListModel.swift */,
 				60B0E19329727FB000346FA0 /* ListViewController.swift */,
 				60B0E1A629728BF100346FA0 /* ListViewModel.swift */,
-				60B0E1A929728C5F00346FA0 /* ListModel.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";

@@ -13,7 +13,7 @@ class ListViewModel {
         
     }
     
-    func itemPressed(_ index: Int) {
+    func itemPressed(_ index: Int) { //to go to the detailsPage
         
     }
 }
