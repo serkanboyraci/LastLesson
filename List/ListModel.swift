@@ -11,8 +11,8 @@ import CoreData
 
 protocol ListModelProtocol: AnyObject {
     
-    func didLiveDataFetch()
-    func didCacheDataFetch()
+    func didLiveDataFetch() // to take from web
+    func didCacheDataFetch() // to take from CoreData
     func didDataCouldntFetch()
 }
 

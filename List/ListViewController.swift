@@ -9,7 +9,8 @@ import UIKit
 
 class ListViewController: UIViewController {
     
-//    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
+    //    @IBOutlet private weak var tableView: UITableView!
     
     private let viewModel = ListViewModel()
     private var tableHelper: ListViewControllerTableHelper!
@@ -19,7 +20,7 @@ class ListViewController: UIViewController {
         
         setupUI()
         setupBindings()
-        viewModel.didViewLoad()
+        viewModel.didViewLoad() // to inform VM
     }
 }
 
