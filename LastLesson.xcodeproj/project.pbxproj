@@ -13,6 +13,7 @@
 		601BC80D29884B7200563AD4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 601BC80C29884B7200563AD4 /* Alamofire */; };
 		601BC80F2988523800563AD4 /* ListViewControllerTableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601BC80E2988523800563AD4 /* ListViewControllerTableHelper.swift */; };
 		601BC812298A536500563AD4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 601BC811298A536500563AD4 /* Kingfisher */; };
+		601BC815298AE7CD00563AD4 /* InternetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601BC814298AE7CD00563AD4 /* InternetManager.swift */; };
 		60B0E19029727FB000346FA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B0E18F29727FB000346FA0 /* AppDelegate.swift */; };
 		60B0E19229727FB000346FA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B0E19129727FB000346FA0 /* SceneDelegate.swift */; };
 		60B0E19429727FB000346FA0 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B0E19329727FB000346FA0 /* ListViewController.swift */; };
@@ -29,6 +30,7 @@
 		601BC807298804D700563AD4 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		601BC808298804D700563AD4 /* ListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCell.xib; sourceTree = "<group>"; };
 		601BC80E2988523800563AD4 /* ListViewControllerTableHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewControllerTableHelper.swift; sourceTree = "<group>"; };
+		601BC814298AE7CD00563AD4 /* InternetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetManager.swift; sourceTree = "<group>"; };
 		60B0E18C29727FB000346FA0 /* LastLesson.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LastLesson.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60B0E18F29727FB000346FA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60B0E19129727FB000346FA0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,9 +57,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		601BC813298AE7B400563AD4 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				601BC814298AE7CD00563AD4 /* InternetManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		60B0E18329727FB000346FA0 = {
 			isa = PBXGroup;
 			children = (
+				601BC813298AE7B400563AD4 /* Managers */,
 				60B0E1A829728BFE00346FA0 /* List */,
 				60B0E18E29727FB000346FA0 /* LastLesson */,
 				60B0E18D29727FB000346FA0 /* Products */,
@@ -188,6 +199,7 @@
 				60B0E19029727FB000346FA0 /* AppDelegate.swift in Sources */,
 				60B0E1AA29728C5F00346FA0 /* ListModel.swift in Sources */,
 				60B0E19229727FB000346FA0 /* SceneDelegate.swift in Sources */,
+				601BC815298AE7CD00563AD4 /* InternetManager.swift in Sources */,
 				60B0E19A29727FB000346FA0 /* LastLesson.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,9 +16,9 @@ class ListCell: UITableViewCell {
     @IBOutlet private weak var nameTitleLabel: UILabel!
     @IBOutlet private weak var nameValueLabel: UILabel!
     @IBOutlet private weak var genderTitleLabel: UILabel!
-    @IBOutlet private weak var genderValueLabel: UIView!
+    @IBOutlet private weak var genderValueLabel: UILabel!
     @IBOutlet private weak var statusTitleLabel: UILabel!
-    @IBOutlet private weak var statusVelueLabel: UILabel!
+    @IBOutlet private weak var statusValueLabel: UILabel!
     
     
     override func awakeFromNib() {

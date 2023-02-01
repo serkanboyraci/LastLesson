@@ -166,11 +166,11 @@
             <connections>
                 <outlet property="contentImageView" destination="ZUe-aQ-AfE" id="wO6-BY-mUa"/>
                 <outlet property="genderTitleLabel" destination="V1m-xf-SIQ" id="oRL-D4-X8N"/>
-                <outlet property="genderValueLabel" destination="DBC-vG-Tpj" id="FAi-1p-1Zl"/>
+                <outlet property="genderValueLabel" destination="rDg-Q8-Ru0" id="CEw-lx-3mC"/>
                 <outlet property="nameTitleLabel" destination="2lL-BP-pAC" id="Epc-tq-3ow"/>
                 <outlet property="nameValueLabel" destination="vE5-hs-7cA" id="bKv-1b-eq8"/>
                 <outlet property="statusTitleLabel" destination="4vK-jy-zGI" id="iYq-xD-8GE"/>
-                <outlet property="statusVelueLabel" destination="wbm-Sm-hpC" id="aVL-W5-Gif"/>
+                <outlet property="statusValueLabel" destination="wbm-Sm-hpC" id="aVL-W5-Gif"/>
             </connections>
             <point key="canvasLocation" x="38.167938931297705" y="-66.901408450704224"/>
         </tableViewCell>
