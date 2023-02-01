@@ -12,7 +12,7 @@ class InternetManager {
     
     static var shared = InternetManager()
     
-    private init() {}
+    private init() {} // only created from here.
     
     
     func isInternetActive() -> Bool {

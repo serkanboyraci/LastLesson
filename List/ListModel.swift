@@ -26,7 +26,7 @@ class ListModel {
     weak var delegate: ListModelProtocol?
     
     func fetchData() {
-        if InternetManager.shared.isInternetActive() {
+        if InternetManager.shared.isInternetActive() { // internt is active do here
             AF.request("https://rickandmortyapi.com/api/character/?page=1").responseDecodable(of: ApiData.self) { (res) in
                 guard
                     let response = res.value
@@ -41,7 +41,7 @@ class ListModel {
                     self.saveToCoreData(item)
                 }
             }
-        } else {
+        } else { // internete nonactive do here, call  CoreData funcs
             retrieveFromCoreData()
         }
     }
