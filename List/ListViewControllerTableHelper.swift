@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ListViewControllerTableHelper: NSObject {
+class ListViewControllerTableHelper: NSObject { // to self any class ypu must use NSObject
     
     typealias RowItem = ListCellModel
     
@@ -21,7 +21,7 @@ class ListViewControllerTableHelper: NSObject {
     init(tableView: UITableView, viewModel: ListViewModel) {
         self.tableView = tableView
         self.viewModel = viewModel
-        super.init()
+        super.init() // you must use this to use NSObject
         
         setupTableView()
     }
