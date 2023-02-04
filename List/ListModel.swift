@@ -8,6 +8,7 @@
 import Foundation
 import Alamofire
 import CoreData
+import UIKit
 
 protocol ListModelProtocol: AnyObject {
     
@@ -18,7 +19,7 @@ protocol ListModelProtocol: AnyObject {
 
 class ListModel {
     
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate // to reach appDelegate
     
     private(set) var data: [CharacterData] = []
     private(set) var databaseData: [ListEntity] = []
@@ -38,7 +39,7 @@ class ListModel {
                 self.delegate?.didLiveDataFetch()
                 
                 for item in self.data {
-                    self.saveToCoreData(item)
+                    self.saveToCoreData(item) // to save all data
                 }
             }
         } else { // internete nonactive do here, call  CoreData funcs
@@ -48,9 +49,9 @@ class ListModel {
     
     private func saveToCoreData(_ data: CharacterData) {
         let context = appDelegate.persistentContainer.viewContext
-        if let entity = NSEntityDescription.entity(forEntityName: "ListEntity", in: context) {
+        if let entity = NSEntityDescription.entity(forEntityName: "ListEntity", in: context) { // take from Coredata
             let listObject = NSManagedObject(entity: entity, insertInto: context)
-            listObject.setValue(data.gender ?? "", forKey: "gender")
+            listObject.setValue(data.gender ?? "", forKey: "gender") //define coreData attributes
             listObject.setValue(data.id ?? 0, forKey: "id")
             listObject.setValue(data.image ?? "", forKey: "imageUrl")
             listObject.setValue(data.name ?? "", forKey: "name")
@@ -58,7 +59,7 @@ class ListModel {
             listObject.setValue(data.species ?? "", forKey: "species")
             
             do {
-                try context.save()
+                try context.save() // canbe error , we must do it do-try-catch
             } catch {
                 print("ERROR while saving data to CoreData")
             }
@@ -68,8 +69,8 @@ class ListModel {
     private func retrieveFromCoreData() {
         let context = appDelegate.persistentContainer.viewContext
         
-        let request = NSFetchRequest<ListEntity>(entityName: "ListEntity")
-        
+        let request = NSFetchRequest<ListEntity>(entityName: "ListEntity") // to take data from coreData
+        // if you want filer your taken data
         do {
             let result = try context.fetch(request)
             print("\(result.count)")

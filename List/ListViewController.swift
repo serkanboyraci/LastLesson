@@ -12,7 +12,7 @@ class ListViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     //    @IBOutlet private weak var tableView: UITableView!
     
-    private let viewModel = ListViewModel()
+    private let viewModel = ListViewModel() // to reach ViewModel instance
     private var tableHelper: ListViewControllerTableHelper!
     
     override func viewDidLoad() {

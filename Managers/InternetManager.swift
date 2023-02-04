@@ -43,6 +43,7 @@ class InternetManager {
         let needsConnection = (flags.rawValue & UInt32(kSCNetworkFlagsConnectionRequired)) != 0
         let ret = (isReachable && !needsConnection)
         
-        return ret
+        return ret // ta take data from CoreData do it 'false'
+        // yo can chack all your data from liya app, with given dathpath url in your computer.
     }
 }
