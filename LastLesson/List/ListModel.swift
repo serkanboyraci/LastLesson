@@ -36,10 +36,10 @@ class ListModel {
                     return
                 }
                 self.data = response.results ?? []
-                self.delegate?.didLiveDataFetch()
+                self.delegate?.didLiveDataFetch() // after fetching data, we inform VM that we took the data
                 
-                for item in self.data {
-                    self.saveToCoreData(item) // to save all data
+                for item in self.data { // after informing VM and
+                    self.saveToCoreData(item) // to save all data // we should do it background thread. // we will wat 10-15 seconds if ot is 10.000 data
                 }
             }
         } else { // internete nonactive do here, call  CoreData funcs

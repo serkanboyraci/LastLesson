@@ -19,7 +19,7 @@ class ListViewModel {
     }
     
     func didViewLoad() {
-        model.fetchData()
+        model.fetchData() // to learn from VC and fetch data
     }
     
     func itemPressed(_ index: Int) {
@@ -27,7 +27,7 @@ class ListViewModel {
     }
 }
 
-extension ListViewModel: ListModelProtocol {
+extension ListViewModel: ListModelProtocol { // model inform to VM 
     
     func didLiveDataFetch() {
         let cellModels: [ListCellModel] = model.data.map{ .init(imageURL: $0.image ?? "", name: $0.name ?? "", status: $0.status ?? "", gender: $0.gender ?? "") }

@@ -12,8 +12,8 @@ class ListViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     //    @IBOutlet private weak var tableView: UITableView!
     
-    private let viewModel = ListViewModel() // to reach ViewModel instance
-    private var tableHelper: ListViewControllerTableHelper!
+    private let viewModel = ListViewModel() // 1 to reach ViewModel instance
+    private var tableHelper: ListViewControllerTableHelper! // 2 to reach tableHelper
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +27,7 @@ class ListViewController: UIViewController {
 private extension ListViewController {
     
     private func setupUI() {
-        tableHelper = .init(tableView: tableView, viewModel: viewModel)
+        tableHelper = .init(tableView: tableView, viewModel: viewModel) // when we clecked any item, we must inform ViewModel
     }
     
     func setupBindings() {
