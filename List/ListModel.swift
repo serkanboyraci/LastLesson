@@ -59,7 +59,7 @@ class ListModel {
             listObject.setValue(data.species ?? "", forKey: "species")
             
             do {
-                try context.save() // canbe error , we must do it do-try-catch
+                try context.save() // can be error , we must do it do-try-catch
             } catch {
                 print("ERROR while saving data to CoreData")
             }

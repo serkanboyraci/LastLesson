@@ -41,7 +41,7 @@ class ListViewControllerTableHelper: NSObject { // to self any class ypu must us
 extension ListViewControllerTableHelper: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel?.itemPressed(indexPath.row)
+        viewModel?.itemPressed(indexPath.row) // we inform VM that item pressed
     }
 }
 
